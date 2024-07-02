@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/biru"
+    tools:context=".ModelActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="413dp"
+        android:layout_height="87dp"
+        android:layout_margin="0dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/coklat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MODEL"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold|italic"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/cn">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="1.Layer (type)\n:dense (Dense): Ini adalah layer pertama dari model dengan tipe Dense atau fully connected layer\n
+dense_1 (Dense): Ini adalah layer kedua dari model dengan tipe Dense.\n
+dense_2 (Dense): Ini adalah layer ketiga dari model dengan tipe Dense.\n\n
+2.Output Shape:\n Untuk layer pertama dense, output shape-nya adalah (None, 8), yang berarti layer ini memiliki 8 neuron.\n
+Untuk layer kedua dense_1, output shape-nya adalah (None, 6), yang berarti layer ini memiliki 6 neuron.\n
+Untuk layer ketiga dense_2, output shape-nya adalah (None, 4), yang berarti layer ini memiliki 4 neuron.\n\n
+3.Param #:\n
+
+Ini menunjukkan jumlah parameter yang dapat dilatih (trainable parameters) di setiap layer.\n
+Untuk layer pertama dense, jumlah parameternya adalah 88.\n
+Untuk layer kedua dense_1, jumlah parameternya adalah 54.\n
+Untuk layer ketiga dense_2, jumlah parameternya adalah 28.\n\n
+4.Total params:\n
+
+Total jumlah parameter yang dapat dilatih untuk seluruh model adalah 170.\n\n
+5.Trainable params:\n
+
+Jumlah parameter yang dapat dilatih adalah 170.\n\n
+Non-trainable params:\n
+
+Tidak ada parameter yang tidak dapat dilatih dalam model ini (jumlahnya 0).\n
+Secara keseluruhan, gambar ini menunjukkan bahwa model ini terdiri dari tiga lapisan Dense, dengan jumlah neuron masing-masing 8, 6, dan 4, serta total parameter yang dapat dilatih sebanyak 170.\n\n
+\nPenjelasan Singkat : \n
+Gambar tersebut menunjukkan arsitektur model jaringan saraf dengan tiga layer:
+
+\nLayer 1: 8 neuron, 88 parameter.
+\nLayer 2: 6 neuron, 54 parameter.
+\nLayer 3: 4 neuron, 28 parameter.
+\nTotal parameter: 170 (semua dapat dilatih)."
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/white">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/model" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
